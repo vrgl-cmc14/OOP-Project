@@ -33,6 +33,7 @@ public class MainFrame extends JFrame {
 	private JTextField update_end;
 	private JTextField update_price;
 	private JTable table_1;
+	private JTable table_2;
 
 	/**
 	 * Launch the application.
@@ -62,6 +63,18 @@ public class MainFrame extends JFrame {
 		Main.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(Main);
 		Main.setLayout(new CardLayout(0, 0));
+		
+		JPanel order_logs = new JPanel();
+		Main.add(order_logs, "name_92777637589000");
+		order_logs.setLayout(null);
+		
+		table_2 = new JTable();
+		table_2.setBounds(10, 72, 624, 476);
+		order_logs.add(table_2);
+		
+		JLabel lblNewLabel = new JLabel("Rental Logs");
+		lblNewLabel.setBounds(10, 47, 81, 14);
+		order_logs.add(lblNewLabel);
 		
 		JPanel update_rent = new JPanel();
 		Main.add(update_rent, "name_88760630852500");
